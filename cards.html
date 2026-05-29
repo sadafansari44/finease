@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Cards</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: black; /* Luxury themed background */
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      font-size: 3em;
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #FFD700;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      font-weight: bold;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+      gap: 20px;
+      padding: 40px;
+    }
+
+    /* Card Style */
+    .card {
+      background-color: rgb(0, 0, 0);
+      border-radius: 15px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border-top: 5px solid #000000;
+      box-shadow: 0 6px 15px rgba(237, 211, 15, 0.944);
+    
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgb(220, 171, 10);
+      background-color: #FFD700;
+      
+      
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* Card Title Color */
+    .card h3 {
+      margin-top: 10px;
+      font-size: 1.5em;
+      color: #fafbfc;
+      font-weight: bold;
+    }
+
+    .card p {
+      font-size: 1em;
+      color: #f9f9f9;
+      margin-bottom: 15px;
+    }
+
+    /* Know More Button */
+    .card button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .card {
+      animation: fadeIn 0.5s ease-in;
+    }
+    .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #e0d9d9;
+            color: rgb(0, 0, 0);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            animation: glowBorder 2s infinite;
+        }
+
+        .footer-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #000000;
+            text-align: left;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .footer-links li {
+            display: inline-block;
+        }
+
+        .footer-links a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #f5a623;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .social-icons a {
+            font-size: 1.5em;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Glowing border animation */
+        @keyframes glowBorder {
+            0% {
+                box-shadow: 0 0 10px #f5a623, 0 0 20px #f5a623, 0 0 30px #f5a623;
+            }
+            50% {
+                box-shadow: 0 0 20px #f5a623, 0 0 30px #f5a623, 0 0 40px #f5a623;
+            }
+            100% {
+                box-shadow: 0 0 10px #f5a623, 0 0 20px #f5a623, 0 0 30px #f5a623;
+            }
+        }
+
+        footer {
+            padding: 10px 0;
+            background-color: #000000;
+            text-align: center;
+            color: #c4b9b9;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        footer p {
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+
+        /* Light border hover effect */
+        .footer-content:hover {
+            box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.6);
+            transition: box-shadow 0.3s ease;
+        }
+
+  </style>
+</head>
+<body>
+
+  <h1>Select Your Credit Card</h1>
+
+  <div class="card-container">
+    <!-- First Row -->
+    <div class="card">
+      <img src="au-bank-altura-plus-credit-card.jpeg" alt="Card 1 Image">
+      <div class="card-body">
+        <h3>AU Small Finance Bank Credit Cards</h3>
+        <p>Exclusive rewards, low interest rates, travel benefits.</p>
+        <button onclick="window.location.href='aualtura.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Millennia.jpeg" alt="Card 2 Image">
+      <div class="card-body">
+        <h3>IDFC BANK Credit Card</h3>
+        <p>High rewards for shopping and dining, with cash-back offers.</p>
+        <button onclick="window.location.href='gold-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="induslnd platinum credit card.jpeg.jpg" alt="Card 3 Image">
+      <div class="card-body">
+        <h3>Indusind bank Credit Card</h3>
+        <p>Great savings on fuel, perfect for daily purchases.</p>
+        <button onclick="window.location.href='indusindcard.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="icici bank ferrari credit card.jpg" alt="Card 4 Image">
+      <div class="card-body">
+        <h3>ICICI BANK Credit Card</h3>
+        <p>Earn miles and points for every purchase abroad.</p>
+        <button onclick="window.location.href='icicicard.html'">Know More</button>
+      </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="card">
+      <img src="hdfc bank regalia credit card.png" alt="Card 5 Image">
+      <div class="card-body">
+        <h3>HDFC BANK Credit Card</h3>
+        <p>Designed for business spending with high credit limits.</p>
+        <button onclick="window.location.href='hdfccard.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="axis bank privilege credit card.jpeg.jpg" alt="Card 6 Image">
+      <div class="card-body">
+        <h3>Axis Bank Credit Card</h3>
+        <p>Earn cash back on every purchase with no annual fee.</p>
+        <button onclick="window.location.href='axiscard.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Canara corporate credit card.jpg" alt="Card 7 Image">
+      <div class="card-body">
+        <h3>Canara Bank Credit Card</h3>
+        <p>Perfect for students with no annual fees and rewards on essentials.</p>
+        <button onclick="window.location.href='canaracard.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Kotak fortune gold credit card.jpeg.jpg" alt="Card 8 Image">
+      <div class="card-body">
+        <h3>kotak Bank Credit Card</h3>
+        <p>Exclusive access to premium lounges, high reward points.</p>
+        <button onclick="window.location.href='kotakcard.html'">Know More</button>
+      </div>
+    </div>
+
+    <!-- Third Row -->
+    <div class="card">
+      <img src="union bank platinum credit card.jpeg.jpg" alt="Card 9 Image">
+      <div class="card-body">
+        <h3>Union Bank Credit Card</h3>
+        <p>Earn double points on all purchases with no cap.</p>
+        <button onclick="window.location.href='unioncard.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="IOB classic crediit card.jpeg.jpg" alt="Card 10 Image">
+      <div class="card-body">
+        <h3>IOB Credit Card</h3>
+        <p>Get discounts on movies, concerts, and events with every swipe.</p>
+        <button onclick="window.location.href='iobcard.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="boi mastercard gold credit card.webp" alt="Card 11 Image">
+      <div class="card-body">
+        <h3>Bank of India Credit Card</h3>
+        <p>Special travel perks including free airport lounge access worldwide.</p>
+        <button onclick="window.location.href='boicard.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="sbi bpcl octane credit card.jpeg.jpg" alt="Card 12 Image">
+      <div class="card-body">
+        <h3>State Bank Of India Credit Card</h3>
+        <p>Share your credit limit with family members for a single bill.</p>
+        <button onclick="window.location.href='sbicard.html'">Know More</button>
+      </div>
+    </div>
+
+    <!-- Fourth Row -->
+    <div class="card">
+      <img src="bank of baroda premier credit card.jpeg.jpg" alt="Card 13 Image">
+      <div class="card-body">
+        <h3>Bank of Baroda Credit Card</h3>
+        <p>Earn rewards for sustainable purchases and eco-friendly habits.</p>
+        <button onclick="window.location.href='bobcard.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="federal bank imperio cd.jpg" alt="Card 14 Image">
+      <div class="card-body">
+        <h3>Federal Bank Credit Card</h3>
+        <p>Extra rewards for grocery and retail purchases.</p>
+        <button onclick="window.location.href='federalcard.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="pnb global gold credit card.jpeg.jpg" alt="Card 15 Image">
+      <div class="card-body">
+        <h3>Punjab National Bank Credit Card</h3>
+        <p>Save on interest with the lowest rates in the market.</p>
+        <button onclick="window.location.href='pnbcard.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="yes first.jpeg" alt="Card 16 Image">
+      <div class="card-body">
+        <h3>Yes bank Credit Card</h3>
+        <p>Earn points and discounts on fuel purchases across major stations.</p>
+        <button onclick="window.location.href='yescard.html'">Know More</button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container footer-content">
+        <div class="footer-logo">FINEASE</div>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Reviews</a></li>
+            <li><a href="bank-account.html">Bank Accounts</a></li>
+            <li><a href="cards.html">Credit cards</a></li>
+            <li><a href="loan.html">Loan</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><img src="facebook-logo.jpeg" alt="Facebook" width="24"></a>
+            <a href="#" aria-label="Twitter"><img src="X-Logo.png" alt="X" width="24"></a>
+            <a href="#" aria-label="Instagram"><img src="Instagram-Logo.jpeg" alt="Instagram" width="24"></a>
+        </div>
+    </div>
+    <p>&copy; fineaseweb@gmail.com. All rights reserved.</p>
+</footer>
+  
+</body>
+</html>
+
